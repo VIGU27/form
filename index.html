@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="form.css" rel="stylesheet">
+    <title>INFOFEST'23 REGISTRATION Form</title>
+  </head>
+  <body>
+    <div class="container mt-5" >
+        <form class="row g-3" onsubmit="return passvalue()">
+            <div class="col-md-2">
+                <img src="logo.jpg" height="90px">
+            </div>
+            <div class="col-md-10 mt-4">
+                <h2>GOA UNIVERSITY PRESENTS<br> INFOFEST 2023 </h2>
+            </div>
+            <div class="col-md-6">
+              <label for="inputFname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="Fname">
+            </div>
+            <div class="col-md-6">
+              <label for="inputLname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="Lname">
+            </div>
+            <div class="col-12">
+              <label for="inputEmail4" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="Email" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputClgname" class="form-label">College Name</label>
+                <input type="text" class="form-control" id="Clgname">
+              </div>
+            <div class="col-6">
+              <label for="inputAddress2" class="form-label">College Address</label>
+              <input type="text" class="form-control" id="clgaddress" >
+            </div>
+            <div class="col-md-5">
+                <label for="formFile" class="form-label">ID card photo</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+            <div class="col-md-3">
+              <label for="inputState" class="form-label">State</label>
+              <select id="State" class="form-select">
+                <option selected>Choose...</option>
+                <option>GOA</option>
+                <option>KARNATAKA</option>
+                <option>MAHARASTRA</option>
+                <option>TAMIL NADU</option>
+                <option>KERALA</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+                <label for="inputEvent" class="form-label">Event</label>
+                <select id="Event" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>blind coding</option>
+                  <option>hackathon</option>
+                  <option>UI/UX</option>
+                  <option>web dev</option>
+                  <option>debugging</option>
+                </select>
+              </div>
+            
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  I have provided all correct details
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" >Submit</button>
+            </div>
+          </form>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+    function passvalue()
+        {
+            var Fname=document.getElementById("Fname").value;
+            var Lname=document.getElementById("Lname").value;
+            var Email=document.getElementById("Email").value;
+            var Clgname=document.getElementById("Clgname").value;
+            var clgaddress=document.getElementById("clgaddress").value;
+            var State=document.getElementById("State").value;
+            var Event=document.getElementById("Event").value;
+            
+            localStorage.setItem("Fname", Fname);
+            localStorage.setItem("Lname", Lname);
+            localStorage.setItem("Email", Email);
+            localStorage.setItem("Clgname", Clgname);
+            localStorage.setItem("clgaddress", clgaddress);
+            localStorage.setItem("State", State);
+            localStorage.setItem("Event", Event);
+
+            window.location.href = "formcheck.html";
+            return false;
+        }
+    </script>
+    
+
+  
+  </body>
+</html>

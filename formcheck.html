@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CONFIRMATION</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="form.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<h1>PLEASE CONFIRM YOUR DETAILS</h1>
+		<ul>
+			<li>First Name: <span id="Fname"></span></li>
+			<li>Last Name: <span id="Lname"></span></li>
+			<li>Email Id: <span id="Email"></span></li>
+			<li>College name: <span id="Clgname"></span></li>
+			<li>Address: <span id="clgaddress"></span></li>
+			<li>State: <span id="State"></span></li>
+			<li>Event: <span id="Event"></span></li>
+		</ul>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		// Retrieve form data from localStorage
+		var Fname = localStorage.getItem("Fname");
+		var Lname = localStorage.getItem("Lname");
+		var Email = localStorage.getItem("Email");
+		var Clgname = localStorage.getItem("Clgname");
+		var clgaddress = localStorage.getItem("clgaddress");
+		var State = localStorage.getItem("State");
+		var Event = localStorage.getItem("Event");
+
+		// Update HTML with form data
+        document.getElementById("Fname").innerHTML = Fname;
+        document.getElementById("Lname").innerHTML = Lname;
+        document.getElementById("Email").innerHTML = Email;
+        document.getElementById("Clgname").innerHTML = Clgname;
+        document.getElementById("clgaddress").innerHTML = clgaddress;
+        document.getElementById("State").innerHTML = State;
+        document.getElementById("Event").innerHTML = Event;
+
+	// Clear localStorage
+	localStorage.clear();
+</script>
+</body>
+</html>
